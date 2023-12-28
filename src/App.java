@@ -40,7 +40,7 @@ public class App {
         Matcher phnmatcher=phnpattern.matcher(phonenum);
         System.out.println("phone num: "+phonenum+" "+phnmatcher.matches());
 
-        //password rule1+rule2
+        //password rule1+rule2+rule3+rule4
         String passPattern= "^(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}$";
         Pattern passpattern = Pattern.compile(passPattern);
         Matcher passmatcher=passpattern.matcher(password);
