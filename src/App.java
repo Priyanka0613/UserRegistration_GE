@@ -11,24 +11,32 @@ public class App {
         String lastname=s.nextLine();
         System.out.println("Enter email:");
         String emailname=s.nextLine();
+        System.out.println("Enter phone number:");
+        String phonenum=s.nextLine();
 
-        // //firstname
+        //firstname
         String firstnamePattern= "^[A-Z]{1}[A-Za-z]{3,}$";
         Pattern firstpattern = Pattern.compile(firstnamePattern);
         Matcher firstnamematcher=firstpattern.matcher(firstname);
-        System.out.println(firstnamematcher.matches());
+        System.out.println("name: "+firstname+" "+firstnamematcher.matches());
 
-        // //lastname
+        //lastname
         String lastnamePattern= "^[A-Z]{1}[A-Za-z]{3,}$";
         Pattern lastpattern = Pattern.compile(lastnamePattern);
         Matcher lastnamematcher=lastpattern.matcher(lastname);
-        System.out.println(lastnamematcher.matches());
+        System.out.println("last name: "+lastname+" "+lastnamematcher.matches());
 
         //email
         String emailPattern= "^[a-zA-Z0-9]+(\\.|\\_|\\-|\\+)?[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.+[a-zA-Z]{1,}.[a-zA-Z]*$"; //abc.@gmail.com true
         Pattern emailpattern = Pattern.compile(emailPattern);
         Matcher emailmatcher=emailpattern.matcher(emailname);
-        System.out.println(emailmatcher.matches());
+        System.out.println("email name: "+emailname+" "+emailmatcher.matches());
+
+        //phonenumber
+        String phnPattern= "^[0-9]{2}\\s[1-9]{1}[0-9]{9}$";
+        Pattern phnpattern = Pattern.compile(phnPattern);
+        Matcher phnmatcher=phnpattern.matcher(phonenum);
+        System.out.println("phone num: "+phonenum+" "+phnmatcher.matches());
 
         s.close();
     }
