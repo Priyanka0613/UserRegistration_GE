@@ -13,6 +13,8 @@ public class App {
         String emailname=s.nextLine();
         System.out.println("Enter phone number:");
         String phonenum=s.nextLine();
+        System.out.println("Enter password:");
+        String password=s.nextLine();
 
         //firstname
         String firstnamePattern= "^[A-Z]{1}[A-Za-z]{3,}$";
@@ -37,6 +39,12 @@ public class App {
         Pattern phnpattern = Pattern.compile(phnPattern);
         Matcher phnmatcher=phnpattern.matcher(phonenum);
         System.out.println("phone num: "+phonenum+" "+phnmatcher.matches());
+
+        //password rule1
+        String passPattern= "^[a-zA-Z0-9]{8,}$";
+        Pattern passpattern = Pattern.compile(passPattern);
+        Matcher passmatcher=passpattern.matcher(password);
+        System.out.println("phone num: "+password+" "+passmatcher.matches());
 
         s.close();
     }
