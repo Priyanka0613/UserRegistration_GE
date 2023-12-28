@@ -41,7 +41,7 @@ public class App {
         System.out.println("phone num: "+phonenum+" "+phnmatcher.matches());
 
         //password rule1+rule2
-        String passPattern= "^(?=.*[A-Z]).{8,}$";
+        String passPattern= "^(?=.*[A-Z])(?=.*\\d).{8,}$";
         Pattern passpattern = Pattern.compile(passPattern);
         Matcher passmatcher=passpattern.matcher(password);
         System.out.println("phone num: "+password+" "+passmatcher.matches());
